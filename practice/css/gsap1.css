@@ -1,0 +1,18 @@
+.box {
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pink {
+    background: pink;
+  }
+  .orange {
+    background: orange;
+  }
+  .green {
+    background: green;
+  }
