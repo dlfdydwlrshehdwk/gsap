@@ -1,0 +1,17 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+html,body,h1,h2,div,h3,ul,li,dl,dt,dd,h4{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}

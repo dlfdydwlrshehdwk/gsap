@@ -1,0 +1,41 @@
+.page1{
+    height: 200vh;
+}
+.page2 {
+    background-color: aqua;
+    height: 100vh;
+    position: relative;
+}
+.slidebx{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+.slide {
+    display: flex;
+    gap: 200px;
+    background-color: white;
+}
+.bx{
+    width: 400px;
+    height: 400px;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.yellow { 
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.purple {
+    background-color: purple;
+}
+.navy { 
+    background-color: navy;
+}
