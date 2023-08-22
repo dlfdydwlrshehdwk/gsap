@@ -1,22 +1,27 @@
+/* 스크롤바가 생겨야 해서 세로폭을 늘림 */
 .page1{
     height: 200vh;
 }
+/* 스크롤이 시작될부분 trigger */
 .page2 {
     background-color: aqua;
     height: 100vh;
     position: relative;
 }
+/* 스크롤이벤트시 움직일 친구 */
 .slidebx{
     position: absolute;
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
 }
+/* 움직일친구 셋팅 */
 .slide {
     display: flex;
     gap: 200px;
     background-color: white;
 }
+/* 각 박스셋팅 */
 .bx{
     width: 400px;
     height: 400px;
