@@ -1,0 +1,49 @@
+.page1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.page2 {
+    height: 100vh;
+}
+.sqimg1{
+    display: none;
+}
+.sqimg2{
+    display: none;
+}
+.sqimg3{
+    display: none;
+}
+#pin{
+    height: 100vh;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.page3{
+    height: 100vh;
+}
+.txt{
+    font-size: 200px;
+    font-weight: bold;
+    color: #f3f3f3;
+}
+.txt.on{
+    transition: color 1s;
+    color : black
+}
+.txt-set{
+    width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

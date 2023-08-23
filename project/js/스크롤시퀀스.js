@@ -55,9 +55,9 @@
                 endColor : 'black',
                 fontSize : '4rem',
                 indent : 200 // 안쪽(오른쪽끝에서 왼쪽)으로들여쓰기
-              },
-        },
-    })
+                },
+            },
+        })
 
 
 
