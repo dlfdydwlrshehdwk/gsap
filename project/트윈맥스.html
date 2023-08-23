@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤매직</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/트윈맥스.css">
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- 스크롤매직 CDN -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!-- 디버그CDN 인디케이터표시 -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+</head>
+<body>
+    <div class="page1">
+        <div>
+            <div>gsap 기본구조</div>
+            <div>
+                gsap.to('타겟요소명',지속시간(몇초간진행할건지),{ 애니메이션 속성 ex : backgroundColor : 'blue'})
+            </div>
+            
+        </div>
+    </div>
+    <div class="page1">
+        <div>TweenMax.staggerTo()</div>
+        <div>
+            <div>
+                TweenMax.staggerTo(target(Array), duration, {vars}, 대상 배열 트윈 사이의 딜레이 시간); 
+            </div>
+            <div>
+                여러 개의 배열(Array)인 this(Target) 속성을  순차적(시간 차)으로 지정한 속성까지 트윈 합니다.<br>
+                stagger 메서드는 공식 문법이 gsap로 바뀌기 이전 버전(2.1.3 - Version)인 TweenMax 였을 때 존재했던 메서드이지만<br> gsap로 공식 문법(3.0.0 - Version)이 변경되고, TimelineMax 하나의 메서드로 통일된 것 같습니다.
+            </div>
+            <div>
+                stagger(Target 배열) : 각 배열 트윈 사이의 모션 실행,  TimelineMax(트윈 배열) : this(Target) 트윈이 종료 후 모션 실행합니다.
+            </div>
+            <div>
+                이렇듯 엄연히 두 개의 메서드는 결이 다른데 왜 없어졌는지 모르겠습니다. <br>
+                개인적으로 저는 stagger 메서드를 더 선호합니다.<br>
+                그러나 현재 최신 버전에서도 하위 버전을 지원하므로 TweenMax.staggerTo()를 사용 가능합니다.
+            </div>
+        </div>
+    </div>
+    <div class="practice1 page1">
+        <h2>TweenMax.staggerTo( )</h2>
+        <a href="javascript:tweenStaggerTo();" class="btn">Start</a>
+        <div class="content">
+        <ul>
+            <li id="e0" class="tweenbox">1</li>
+            <li id="e1" class="tweenbox">2</li>
+            <li id="e2" class="tweenbox">3</li>
+            <li id="e3" class="tweenbox">4</li>
+            <li id="e4" class="tweenbox">5</li>
+        </ul>
+        </div>
+    </div>
+    <div class="practice2 page1">
+        <h2>TweenMax.staggerFrom( )</h2>
+        <p>여러 개의 배열(Array)을 지정한 속성에서 this(Target) 속성까지  순차적(시간 차)으로  트윈 합니다.<br>
+        TweenMax.staggerFrom(target(Array), duration, {vars}, 대상 배열 트윈 사이의 딜레이 시간);</p>
+        <a href="javascript:tweenStaggerFrom();" class="btn2">Start</a>
+        <div class="content2">
+            <ul>
+                <li class="tweenbox2">1</li>
+                <li class="tweenbox2">2</li>
+                <li class="tweenbox2">3</li>
+                <li class="tweenbox2">4</li>
+                <li class="tweenbox2">5</li>
+            </ul>
+        </div>
+    </div>
+    <div class="practice3 page1">
+        <h2>TimelineMax( )</h2>
+        <p>
+            this(Target) 하나의 객체를 순차적으로 트윈 하는 타임라인  문법입니다. <br>
+            gsap.to()가 연달아 있는 코드와 비슷합니다.
+        </p>
+        <a href="javascript:timelineMax();" class="btn3">Start</a>
+        <div class="content3">
+            <ul>
+                <li class="tweenbox">1</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/트윈맥스.js"></script>
+</body>
+</html>
