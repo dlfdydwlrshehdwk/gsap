@@ -168,19 +168,19 @@ $(window).scroll(function(){
         // 여기가 1차조건 = 박스멈춰! 가 되는 구역
         if(e > 0 && e < c / 3 * 1){
             // 여기가 시작후 첫글씨색바뀌어야 되는부분
-            console.log('첫글씨바낌')
+            // console.log('첫글씨바낌')
             $('.t1 .txt1').siblings().removeClass('on')
             $('.t1 .txt1').addClass('on')
         }
         else if(e > c / 3 * 1 && e < c / 3 * 2){
             // 첫글씨가 회색이되면서 두번째 글씨가 바뀌어야 하는부분
-            console.log('두번째글씨바낌')
+            // console.log('두번째글씨바낌')
             $('.t1 .txt2').siblings().removeClass('on')
             $('.t1 .txt2').addClass('on')
         }
         else{
             // 첫글씨가 회색이되면서 두번째 글씨가 바뀌어야 하는부분
-            console.log('세번째글씨바낌')
+            // console.log('세번째글씨바낌')
             $('.t1 .txt3').siblings().removeClass('on')
             $('.t1 .txt3').addClass('on')
         }
@@ -189,9 +189,6 @@ $(window).scroll(function(){
         // console.log('글씨 다바꿔!')
         $('.txt').removeClass('on')
     }
-    // 일단 첫조건 b 는 0 이여야한다
-
-
 })
 
 
