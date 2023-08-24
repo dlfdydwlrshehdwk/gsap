@@ -184,6 +184,14 @@ $(window).scroll(function(){
             $('.t1 .txt3').siblings().removeClass('on')
             $('.t1 .txt3').addClass('on')
         }
+        // 마지막글씨부분 100vh넘어가면 회색되기 - 글씨 한번씩 다 번쩎고나서 회색되게하기
+        if ( e > c ){
+            target.find('.txt').removeClass('on')
+        }
+        // 박스멈추는게 끝나면 글씨 회색
+        if( e == 0 ){
+            target.find('.txt3').find('.txt').removeClass('on')
+        }
     }
     else {
         // console.log('글씨 다바꿔!')
@@ -192,58 +200,6 @@ $(window).scroll(function(){
 })
 
 
-// 색깔바꾸는 함수... 막상 고정되면서쓸려니 안됨 
-function chgColor1(target){
-	let controller = new ScrollMagic.Controller();
-
-	let tween = TweenMax.to(target, .001, { // 요소, 애니시간, 속성
-        // 타겟색 바꿔준다 -> 완료되면 타겟의 형제요소의 색을 기본색으로 바꿔준다.
-		color: "black",
-        onComplete : ()=>{initColor(target)}
-	});
-    
-	let scene = new ScrollMagic.Scene({
-		triggerElement: '#trigger10',
-		duration: Math.round(wH/3),// 스크롤 길이 조정 - 요소위치가 기준 - 소수점안됨
-        triggerHook : 0 // 뷰포트기준 트리거위치 소수점됨
-	})
-	.setTween(tween)
-	.addTo(controller)
-    // .setPin('#trigger10')
-	// .addIndicators(
-    //     {name : '텍스트1'}
-    // );
-};
-// 전과 동
-function chgColor2(target){
-	let controller = new ScrollMagic.Controller();
-
-	let tween = TweenMax.to(target, .001, { // 요소, 애니시간, 속성
-        // 타겟색 바꿔준다 -> 완료되면 타겟의 형제요소의 색을 기본색으로 바꿔준다.
-		color: "black",
-        onComplete : ()=>{initColor(target)}
-	});
-    
-	let scene = new ScrollMagic.Scene({
-		triggerElement: '.t1 .txt2',
-		duration: 0,// Math.round(wH/3),// 스크롤 길이 조정 - 요소위치가 기준 - 소수점안됨
-        triggerHook : 0 // 뷰포트기준 트리거위치 소수점됨
-	})
-	.setTween(tween)
-	.addTo(controller)
-    // .setPin('#trigger10')
-	// .addIndicators(
-    //     {name : '텍스트2'}
-    // );
-};
-
-
-
-
-
-
-// chgColor1($('.txt1'))
-// chgColor2($('.txt2'))
 
 
 
