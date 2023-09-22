@@ -4,7 +4,7 @@ $(()=>{
           trigger: ".container", // trigger 대상
           pin: true, // trigger 고정 스티키기능 - 가로스크롤할거면 필수
           start: "top top", // trigger가 viewport 상단에 닿을때 시작
-          end: "+=1000", // 시작지점에서 500px를 스크롤한 후 끝
+          end: "+=1000", // 시작지점에서 1000px를 스크롤한 후 끝
           scrub: true, // 애니메이션 부드럽게 진행
           markers :{
             startColor :'yellow',
