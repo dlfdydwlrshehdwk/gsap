@@ -10,7 +10,6 @@
 //         delay : 2, // 몇초 뒤에 시작할건지 지연시간
 //         yoyo : true or false, // 애니메이션을 앞뒤로 반복하여 실행함
 //         reversed : true or false, // 애니메이션 역방향에 대한 설정 
-
 //     })
 // }
 
