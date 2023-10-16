@@ -100,7 +100,7 @@ ScrollTrigger.create({
 
 let ani6 = gsap.timeline();
 ani6
-.to(".sc6",{scale : 50,duration : 2})
+.to(".sc6",{scale : 50,duration : 1})
 .to(".sc6",{autoAlpha : 0}) // 애니끝나면 투명하게할려고 따로 넣어줌
 // 근데 이거넣으니까 이벤트 끝나면 빈공간이 생김 그래서빼놈
 ScrollTrigger.create({
