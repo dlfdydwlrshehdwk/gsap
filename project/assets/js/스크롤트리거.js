@@ -26,3 +26,30 @@
         // onToggle : (self) => {console.log("onToggle", self.isActive)}, // 애니가 실행중인지 true false
     // }
 // })
+
+// 스크롤트리거 따로 만들어 사용할때
+// let a = gsap.to('요소',{x:100})
+// ScrollTrigger.create({
+//     animation : a,// 트윈명 
+//     trigger : 트리거될요소명,
+//     start : 숫자, 문자, 함수 함수쓸때 return조심,
+//     end : start와 같음
+//     pin : true,0,1 고정할건지
+//     anticipatePin : 핀을 부드럽게 고정시켜주는기능
+//     scrub : 애니메이션을 부드럽게 보여줄건지 Boolean,0~4
+//     markers : boolean , 함수 {startColor : xx,endColor : xx,fontSize : 'xxpx',fontWeight:'bold',indent:"들여쓰기 숫자"}
+//     once : 애니메이션 한번만실행 kill해줌 그러나 애니메이션은 남아있음 토글액션을 play none none none 해준상태
+//     pinSpacing : boolean,string 패딩제거 false가 제거
+//     toggleClass : 스크롤트리거 활성화할때 실행 string - 트리거에게 클래스를줌 'active', object - {타겟 : '.target',className : 'active'}
+
+// })
+
+// 스크롤트리거를 미디어쿼리처럼 실행하고싶다면... ScrollTrigger.matchMedia()
+// ScrollTrigger.matchMedia({
+//     "(min-width : xxpx)" : () => {
+//         let tween = gsap.timeline()
+//         .to('요소',{})
+
+//         scrollTrigger.create() 
+//     }
+// })
